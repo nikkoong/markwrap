@@ -8,13 +8,21 @@ This extension allows users to select the text they want to wrap, press whatever
 
 Supported characters:
 "markdown" `"`
+
 {markdown} `{`
+
 *markdown* `*`
+
 _markdown_ `_`
+ 
 $markdown$ `$`
+
 `markdown` backtick 
+
 ~~markdown~~ `~~`
+
 ==markdown== `==`
+
 [markdown] `[`
 
 Note: `$text$` is used for MathML and LaTeX compatibility, while backticks in `\`` are used for code.
