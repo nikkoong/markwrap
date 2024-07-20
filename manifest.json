@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "Text Wrapper for Markdown",
+    "version": "1.1",
+    "description": "Wraps selected editable text with character tags for styling, LaTeX, and linking for ease of use with online Markdown editors.",
+    "permissions": ["activeTab","scripting", "storage"],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+      "default_title": "Wrap selected text with Markdown intent",
+      "default_popup":"",
+      "default_icon": {
+        "16": "img/icon16.png",
+        "48": "img/icon48.png",
+        "128": "img/icon128.png"
+      }
+    },
+    "icons": {
+      "16": "img/icon16.png",
+      "48": "img/icon48.png",
+      "128": "img/icon128.png"
+    }
+  }
