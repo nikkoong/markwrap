@@ -3,7 +3,7 @@
     "name": "Text Wrapper for Markdown",
     "version": "1.1",
     "description": "Wraps selected editable text with character tags for styling, LaTeX, and linking for ease of use with online Markdown editors.",
-    "permissions": ["activeTab","scripting", "storage"],
+    "permissions": ["activeTab", "storage"],
     "content_scripts": [
       {
         "matches": ["<all_urls>"],

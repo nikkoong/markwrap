@@ -48,9 +48,15 @@ function wrapSelectedText(key, activeElement,start, end) {
                         case '~':
                             wrappedText = `~~${selectedText}~~`;
                             break;
+                        case '(':
+                            wrappedText = `(${selectedText})`;
+                            break;
+                        case '!':
+                            wrappedText = `![${selectedText}]()`;
+                            break;
                         }
                     activeElement.setRangeText(wrappedText, start, end, 'end');
-                    if (key === '[') {
+                    if (key === '[' || '!') {
                         const modCursorPos = start + wrappedText.length - 1;
                         // set cursor position to be inside the parentheses
                         activeElement.setSelectionRange(modCursorPos,modCursorPos)
@@ -65,7 +71,7 @@ function wrapSelectedText(key, activeElement,start, end) {
 
 // Listen for keydown events when the extension is active
 document.addEventListener('keydown', function(event) {
-    if (extensionActive && ['"', '[', '{', '*', '_', '$', '`', '=', '~'].includes(event.key)) {
+    if (extensionActive && ['"', '[', '{', '*', '_', '$', '`', '=', '~', '(','!'].includes(event.key)) {
         const activeElement = document.activeElement;
         const start = activeElement.selectionStart;
         const end = activeElement.selectionEnd;
