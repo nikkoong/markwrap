@@ -25,6 +25,8 @@ $markdown$ `$`
 
 [markdown] `[`
 
+(markdown) `(`
+
 Note: `$text$` is used for MathML and LaTeX compatibility, while backticks in `\`` are used for code.
 
 This extension also allows for image linking and link creation with `[text]`, and automatically creates the complete Markdown format for links in the form: `[link]()`. Your cursor will be inserted into the open parentheses to paste in a link. For images, select your alt text and press  `!` to insert the markdown syntax for an image.
