@@ -2,6 +2,8 @@ Markdown is a lightweight markup language that is easy to read by humans and als
 
 It uses simple [delimiters](https://www.markdownguide.org/cheat-sheet/) to create nicely formatted text.
 
+One of the reasons I developed this extension was to make writing markdown blog posts easier on [bearblog](https://bearblog.dev/). It will not work on all textboxes on the web, just on `TEXTAREA`, text `INPUT`, contentEditable `div`s. If you want another text input support, please let me know.
+
 A core focus of Markdown is wrapping text in characters like asterisks or underscores to style it with italics or underlines, respectively. Normally, if the text is already typed, you would have to arrow over to the beginning of the word, type your character, and then arrow over to the end of the word to type the final character. This is time consuming.
 
 This extension allows users to select the text they want to wrap, press whatever key they want to wrap the selection with, and automatically wrap the word.
