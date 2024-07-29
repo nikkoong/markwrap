@@ -13,8 +13,9 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 function wrapSelectedText(key, activeElement,start, end) {
     try
     {
-        if (activeElement && (activeElement.tagName === 'TEXTAREA' || (activeElement.tagName === 'INPUT' && activeElement.type === 'text') || (activeElement.tagName === 'DIV' && activeElement.isContentEditable))) 
-        {       
+        if (activeElement)
+        { 
+            console.log(activeElement.tagName);      
             const selectedText = activeElement.value.substring(start,end)
             if (selectedText) 
                 {
@@ -73,8 +74,11 @@ function wrapSelectedText(key, activeElement,start, end) {
 document.addEventListener('keydown', function(event) {
     if (extensionActive && ['"', '[', '{', '*', '_', '$', '`', '=', '~', '(','!'].includes(event.key)) {
         const activeElement = document.activeElement;
-        const start = activeElement.selectionStart;
-        const end = activeElement.selectionEnd;
+        // console.log(event.key);
+        // console.log(activeElement.tagName);
+        // const start = activeElement.selectionStart;
+        // const end = activeElement.selectionEnd;
+        console.log(start, end);
         // Exit function if no text is selected
         if (start == end) {
             return;
