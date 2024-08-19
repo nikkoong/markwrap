@@ -15,7 +15,7 @@ function wrapSelectedText(key, activeElement,start, end) {
     {
         if (activeElement)
         { 
-            console.log(activeElement.tagName);      
+            // console.log(activeElement.tagName);      
             const selectedText = activeElement.value.substring(start,end)
             if (selectedText) 
                 {
@@ -75,10 +75,10 @@ document.addEventListener('keydown', function(event) {
     if (extensionActive && ['"', '[', '{', '*', '_', '$', '`', '=', '~', '(','!'].includes(event.key)) {
         const activeElement = document.activeElement;
         // console.log(event.key);
-        // console.log(activeElement.tagName);
-        // const start = activeElement.selectionStart;
-        // const end = activeElement.selectionEnd;
-        console.log(start, end);
+        console.log(activeElement.tagName);
+        const start = activeElement.selectionStart;
+        const end = activeElement.selectionEnd;
+        // console.log(start, end);
         // Exit function if no text is selected
         if (start == end) {
             return;

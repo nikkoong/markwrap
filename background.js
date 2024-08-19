@@ -1,6 +1,5 @@
 let extensionActive = false;
 
-
 // function to update badge
 function updateBadge(extensionActive) {
   if (extensionActive) {
@@ -41,7 +40,7 @@ loadState();
 
 // Toggling logic with action button 
 chrome.action.onClicked.addListener((tab) => {
-  console.log("Icon clicked!"); // Log to verify the icon click
+  // console.log("Icon clicked!"); // Log to verify the icon click
   
   // toggle extension state
   extensionActive = !extensionActive;
